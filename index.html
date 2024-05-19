@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOAY Creative</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="javascript:void(0)" onclick="scrollToSection(0)">
+                <img src="/company profile/assets/img/loay-logo.svg" alt="Company Logo" class="icon-navbar">
+            </a>
+            <nav class="navbar-dark">
+                <button class=" navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="scrollToSection(1)">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="scrollToSection(2)">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="scrollToSection(3)">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="scrollToSection(4)">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="section0" class="section">
+        <div class="home-content">
+            <div class="home-tagline-main">
+                <h1>Elevate</h1>
+                <h1>Your</h1>
+                <h1>Presence</h1>
+            </div>
+            <div class="home-tagline-support">Unleash the Power of Digital Marketing With LOAY.</div>
+        </div>
+        <svg class="arrows" onclick="scrollToSection(1)">
+            <path class="a1" d="M0 0 L30 32 L60 0"></path>
+            <path class="a2" d="M0 20 L30 52 L60 20"></path>
+        </svg>
+    </div>
+    <div id="section1" class="section">
+        About Page Content
+    </div>
+    <div id="section2" class="section bg-light">
+        Services Page Content
+    </div>
+    <div id="section3" class="section">
+        Portfolio Page Content
+    </div>
+    <div id="section4" class="section bg-light">
+        Contact Us Page Content
+    </div>
+
+    <div class="navigation">
+        <div id="dot0" class="dot" data-target="section0"></div>
+        <div id="dot1" class="dot" data-target="section1"></div>
+        <div id="dot2" class="dot" data-target="section2"></div>
+        <div id="dot3" class="dot" data-target="section3"></div>
+        <div id="dot4" class="dot" data-target="section4"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
