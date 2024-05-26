@@ -13,7 +13,7 @@
     <nav class="navbar navbar-expand-md sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="javascript:void(0)" onclick="scrollToSection(0)">
-                <img src="/assets/img/loay-logo.svg" alt="Company Logo" class="icon-navbar">
+                <img src="/assets/img/logo-rounded-black-white.png" alt="Company Logo" class="icon-navbar">
             </a>
             <nav class="navbar-dark">
                 <button class=" navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -24,13 +24,13 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)" onclick="scrollToSection(1)">About</a>
+                        <a class="nav-link" href="javascript:void(0)" onclick="scrollToSection(1)">Service</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)" onclick="scrollToSection(2)">Services</a>
+                        <a class="nav-link" href="javascript:void(0)" onclick="scrollToSection(2)">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)" onclick="scrollToSection(3)">Portfolio</a>
+                        <a class="nav-link" href="javascript:void(0)" onclick="scrollToSection(3)">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="javascript:void(0)" onclick="scrollToSection(4)">Contact Us</a>
@@ -41,27 +41,54 @@
     </nav>
 
     <div id="section0" class="section">
-        <div class="home-content">
-            <div class="home-tagline-main">
+        <section class="home-content">
+            <section class="home-tagline-main">
                 <h1>Elevate</h1>
                 <h1>Your</h1>
                 <h1>Presence</h1>
-            </div>
-            <div class="home-tagline-support">Unleash the Power of Digital Marketing With LOAY.</div>
+            </section>
+            <section class="home-tagline-support">Unleash the Power of Digital Marketing With LOAY.</section>
+        </section>
+        <div class="arrow-container">
+            <svg class="arrows" onclick="scrollToSection(1)">
+                <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                <path class="a2" d="M0 20 L30 52 L60 20"></path>
+            </svg>
         </div>
-        <svg class="arrows" onclick="scrollToSection(1)">
-            <path class="a1" d="M0 0 L30 32 L60 0"></path>
-            <path class="a2" d="M0 20 L30 52 L60 20"></path>
-        </svg>
+
     </div>
     <div id="section1" class="section">
-        About Page Content
+        <div class="service-left-side">
+            <div class="bubble bubble1"></div>
+            <div class="bubble bubble2"></div>
+            <div class="bubble bubble3"></div>
+            <div class="bubble bubble4"></div>
+            <div class="service-left-side-content">
+                <h2>Left Side Content</h2>
+                <p>This content is displayed on top of the left side with the bubbles in the background.</p>
+            </div>
+        </div>
+        <div class="service-content">
+            Services Page Content
+        </div>
     </div>
     <div id="section2" class="section bg-light">
-        Services Page Content
+        Portfolio Page Content
     </div>
     <div id="section3" class="section">
-        Portfolio Page Content
+        <div class="about-content">
+            About Us Content
+        </div>
+        <div class="about-right-side">
+            <div class="bubble bubble1"></div>
+            <div class="bubble bubble2"></div>
+            <div class="bubble bubble3"></div>
+            <div class="bubble bubble4"></div>
+            <div class="about-right-side-content">
+                <h2>right Side Content</h2>
+                <p>This content is displayed on top of the left side with the bubbles in the background.</p>
+            </div>
+        </div>
     </div>
     <div id="section4" class="section bg-light">
         Contact Us Page Content
