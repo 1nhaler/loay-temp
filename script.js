@@ -38,3 +38,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+// used for the service modal
+document.addEventListener('DOMContentLoaded', function () {
+    $('#exampleModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget); // Button that triggered the modal
+        var serviceId = button.data('service'); // Extract info from data-* attributes
+        var modal = $(this);
+
+        // Get the data from the JSON object
+        var service = serviceData[serviceId];
+        if (service) {
+            modal.find('#modal-title').text(service.title);
+            modal.find('#modal-description').text(service.description);
+        }
+    });
+});
+
+const serviceData = {
+    "1": {
+        "title": "Service 1",
+        "description": "Description for Service 1. Detailed information about what Service 1 offers."
+    },
+    "2": {
+        "title": "Service 2",
+        "description": "Description for Service 2. Detailed information about what Service 2 offers."
+    },
+    "3": {
+        "title": "Service 3",
+        "description": "Description for Service 3. Detailed information about what Service 3 offers."
+    },
+    "4": {
+        "title": "Service 4",
+        "description": "Description for Service 4. Detailed information about what Service 4 offers."
+    }
+};

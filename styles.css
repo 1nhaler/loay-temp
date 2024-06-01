@@ -8,6 +8,64 @@
     src: url(assets/fonts/PTSerif-Regular.ttf);
 }
 
+:root {
+    --peach: #D2AD85;
+    --lime_green: #C4E08A;
+    --light_blue: #75A4DB;
+    --stabilo: #CFD303;
+    --black: #000000;
+    --bg-size: 700px; /* Change the size as needed */
+    --bg-size-small: 200px; /* Change the size for smaller screens */
+    --bg-color-default: #1a1a1a;
+    --font-size-md: 25px
+}
+
+.text-peach{
+    color: var(--peach);
+}
+
+.text-lime-green{
+    color: var(--lime_green);
+}
+
+.text-light-blue{
+    color: var(--light_blue);
+}
+
+.background-peach{
+    background-color: var(--peach);
+}
+
+.background-lime-green{
+    background-color: var(--lime_green);
+}
+
+.background-light-blue{
+    background-color: var(--light_blue);
+}
+
+.text-stabilo{
+    color: var(--stabilo);
+}
+
+.text-size-md{
+    font-size: var(--font-size-md);
+}
+
+.text-color-black{
+    color: var(--black);
+}
+
+.mt-6 {
+    margin-top: 4rem; 
+}
+
+.mb-6 {
+    margin-bottom: 4rem; 
+}
+
+/* ----------------------------------------------------- */
+
 body, html {
     width: 100%;
     height: 100%;
@@ -133,7 +191,8 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--bg-color-default);
+    opacity: 50%;
     z-index: 1;
 } 
 
@@ -143,54 +202,79 @@ body, html {
 }
 
 #section1{
-    background: #111; /* Background color for the section */
+    background: var(--bg-color-default); /* Background color for the section */
     color: #fff; /* Text color */
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    z-index: 2;
 }
 
-.service-left-side {
-    width: 50%;
-    height: 100%;
+.service-content{
+    position: relative;
+    z-index: 5;
+}
+
+.service-content-l > h1{
+    line-height: 50px;
+}
+
+.service-content > h1{
+    line-height: 40px;
+}
+
+.service-box{
+    background: url("assets/img/service-bg.png") no-repeat center center;
+    height: var(--bg-size, 150px); /* Configurable size */
+    background-size: contain; /* or cover depending on the desired effect */
+    top: 0;
+    z-index: 1;
+}
+
+.service-box::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.service-content {
-    width: 50%;
+    background-color: #000000;
+    border-radius: 2%;
+    width: 100%;
     height: 100%;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    right: 0;
+    opacity: 50%;
+    z-index: 2;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 0, 0, 0.5), 0 0 60px rgba(0, 0, 0, 0.5);
+} 
+
+.service-content .btn {
+    height: auto; /* Adjust height as needed */
+    font-size: 1.5rem; /* Adjust font size as needed */
 }
 
-.service-left-side-content {
+.modal-header .close {
     position: absolute;
-    z-index: 3; /* Higher z-index to layer above the bubbles */
-    color: #fff; /* Text color */
-    text-align: center;
+    left: 10px;
+    top: 10px;
+}
+
+.modal-body .container-fluid {
+    padding: 0;
+}
+
+.modal-body .row {
+    align-items: center;
 }
 
 .bubble {
     position: absolute;
     width: 200px;
     height: 200px;
-    background: rgba(0, 255, 0, 0.2); /* Green color */
+    background: rgba(0, 150, 50, 0.2); /* Green color */
     border-radius: 50%;
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 0 0 40px rgba(0, 255, 0, 0.5), 0 0 60px rgba(0, 255, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 150, 50, 0.5), 0 0 40px rgba(0, 150, 50, 0.5), 0 0 60px rgba(0, 150, 50, 0.5);
     animation: move 20s infinite;
     opacity: 0.7;
+    z-index: 1;
 }
 
 .bubble1 {
@@ -225,19 +309,70 @@ body, html {
     animation-duration: 35s;
 }
 
-#section2::before {
+#section2{
+    background-color: var(--bg-color-default); /* Background color for the section */
+    color: #fff; /* Text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: -5;
+}
+
+.portfolio-section::before,
+.portfolio-section::after {
     content: '';
     position: absolute;
+    background: url('assets/img/portofolio-bg.png') no-repeat;
+    background-size: contain; /* or cover depending on the desired effect */
+    width: var(--bg-size, 150px); /* Configurable size */
+    height: var(--bg-size, 150px); /* Configurable size */
+    opacity: 0.5; /* Adjust opacity if needed */
     top: 0;
+    z-index: -1;
+}
+
+.portfolio-section::before {
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-} 
+    transform: scaleX(-1); /* Mirrored horizontally */
+}
+
+.portfolio-section::after {
+    right: 0;
+}
+
+.carousel {
+	height: 700px;
+	perspective: 600px;
+	transform: translateY(-100px);
+    z-index: 10;
+}
+
+.carousel .carousel-item {
+	cursor: grab;
+	width: 400px;
+}
+
+.carousel .carousel-item:active {
+	cursor: grabbing;
+}
+
+.carousel .carousel-item img {
+	width: 100%;
+}
+
+.carousel .carousel-item h3 {
+	background-color: #ffffff;
+	color: #000000;
+	font-size: 2em;
+	font-weight: bold;
+	margin: -5px 0 0;
+	padding: 10px 5px;
+	text-align: center;
+}
 
 #section3{
-    background: #111; /* Background color for the section */
+    background: var(--bg-color-default); /* Background color for the section */
     color: #fff; /* Text color */
     display: flex;
     align-items: center;
@@ -245,48 +380,104 @@ body, html {
     position: relative;
 }
 
-.about-right-side {
-    width: 50%;
-    height: 100%;
-    position: absolute;
+.about-content-box{
+    background: url("assets/img/about-us-bg.png") no-repeat center center;
+    height: var(--bg-size, 150px); /* Configurable size */
+    background-size: contain; /* or cover depending on the desired effect */
     top: 0;
-    right: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    z-index: 1;
 }
 
-.about-content {
-    width: 50%;
-    height: 100%;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.about-right-side-content {
-    position: absolute;
-    z-index: 3; /* Higher z-index to layer above the bubbles */
-    color: #fff; /* Text color */
-    text-align: center;
-}
-
-
-#section4::before {
+.about-content-box::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
+    background-color: #000000;
+    border-radius: 2%;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    opacity: 50%;
+    z-index: 2;
 } 
+
+.about-content{
+    position: relative;
+    z-index: 5;
+}
+
+.about-content > h1{
+    line-height: 40px;
+}
+
+
+#section4 {
+    background: var(--bg-color-default); 
+    color: #fff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+} 
+
+.contact-us-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-right: 20px; /* Add some spacing between content and image */
+}
+
+.contact-us-content{
+   content: '';
+}
+
+.contact-us-content h1{
+    font-size: 3rem;
+}
+
+.contact-us-content p{
+    font-size: 2rem;
+    line-height: 35px;
+}
+
+.contact-us-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-us-content ul li {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.contact-us-content ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.contact-us-content ul li a i {
+    margin-right: 15px;  /* Adjust this value for more or less space */
+}
+
+.contact-us-img-container {
+    position: relative;
+    z-index: 5;
+}
+
+.contact-us-img-shadow{
+    background: #BDD892; /* Green color */
+    opacity: 0.8;
+    box-shadow: 0 0 0 2px rgba(0, 255, 0, 0.5), 0 0 10px rgba(0, 255, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.5);;
+    border-radius: 200%;
+    z-index: 2;
+    height: 5px;
+    margin-top: -3%;
+    margin-left: 13%;
+    width: 70%;
+    position: absolute;
+}
 
 .home-content{
     text-align: center;
@@ -387,5 +578,26 @@ body, html {
 @media (max-width: 768px) {
     .navigation {
         display: none;
+    }
+
+    .section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .about-us-content, .about-us-img-container {
+        max-width: 100%; /* Adjust to occupy full width on smaller screens */
+        padding: 0; /* Reset padding */
+    }
+
+    .portfolio-section::before,
+    .portfolio-section::after {
+        width: var(--bg-size-small, 100px); /* Configurable size for smaller screens */
+        height: var(--bg-size-small, 100px); /* Configurable size for smaller screens */
+    }
+
+    .service-content .btn {
+        height: auto; /* Adjust for smaller screens */
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
     }
 }

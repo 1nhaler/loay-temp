@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOAY Creative</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -40,6 +41,7 @@
         </div>
     </nav>
 
+    <!-- Home Section -->
     <div id="section0" class="section">
         <section class="home-content">
             <section class="home-tagline-main">
@@ -57,49 +59,196 @@
         </div>
 
     </div>
-    <div id="section1" class="section">
-        <div class="service-left-side">
-            <div class="bubble bubble1"></div>
-            <div class="bubble bubble2"></div>
-            <div class="bubble bubble3"></div>
-            <div class="bubble bubble4"></div>
-            <div class="service-left-side-content">
-                <h2>Left Side Content</h2>
-                <p>This content is displayed on top of the left side with the bubbles in the background.</p>
+
+    <!-- Services Section -->
+    <div id="section1" class="section container-fluid">
+        <div class="d-flex flex-row flex-wrap">
+            <div class="col-md-5 offset-1">
+                <div class="bubble bubble1"></div>
+                <div class="bubble bubble2"></div>
+                <div class="bubble bubble3"></div>
+                <div class="bubble bubble4"></div>
+                <div class="service-content-l col-md-8 offset-1">
+                    <h1 class="text-muted text-left display-3">Our</h1>
+                    <h1 class="text-left display-3">Services</h1>
+                    <p class="text-justify mt-5">
+                        At LOAY, we craft compelling branding strategies that resonate with your audience,
+                        create stunning creative designs that make a lasting first impression, manage your
+                        social media presence to engage and grow your community, and ensure your e-commerce platforms
+                        run smoothly with comprehensive maintanence services. Let us amplify your brand's voice in
+                        a crowded digital landscape.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="service-box col-md-11 container">
+                    <div class="row service-content rounded-lg p-5 text-center ">
+                        <div class="col-md-6 mb-4">
+                            <button type="button" class="btn btn-dark btn-lg btn-block p-5" data-toggle="modal"
+                                data-target="#exampleModal" data-service="1">
+                                Branding <br>Strategy
+                            </button>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <button type="button" class="btn btn-dark btn-lg btn-block p-5" data-toggle="modal"
+                                data-target="#exampleModal" data-service="2">
+                                Creative <br>Design
+                            </button>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <button type="button" class="btn btn-dark btn-lg btn-block p-5" data-toggle="modal"
+                                data-target="#exampleModal" data-service="3">
+                                Social Media <br>Management
+                            </button>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <button type="button" class="btn btn-dark btn-lg btn-block p-5" data-toggle="modal"
+                                data-target="#exampleModal" data-service="4">
+                                E-Commerce <br>Maintanence
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="service-content">
-            Services Page Content
-        </div>
-    </div>
-    <div id="section2" class="section bg-light">
-        Portfolio Page Content
-    </div>
-    <div id="section3" class="section">
-        <div class="about-content">
-            About Us Content
-        </div>
-        <div class="about-right-side">
-            <div class="bubble bubble1"></div>
-            <div class="bubble bubble2"></div>
-            <div class="bubble bubble3"></div>
-            <div class="bubble bubble4"></div>
-            <div class="about-right-side-content">
-                <h2>right Side Content</h2>
-                <p>This content is displayed on top of the left side with the bubbles in the background.</p>
-            </div>
-        </div>
-    </div>
-    <div id="section4" class="section bg-light">
-        Contact Us Page Content
     </div>
 
+    <!-- Portfolio Section -->
+    <div id="section2" class="section container-fluid portfolio-section">
+        <div>
+            Portfolio Page Content
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div id="section3" class="section container-fluid">
+        <div class="d-flex flex-row flex-wrap">
+            <div class="col-md-5 offset-md-1 align-items-stretch">
+                <div class="about-content-box rounded-lg pt-4 text-center">
+                    <div class="about-content">
+                        <h1 class="">Three Pillars Of</h1>
+                        <h1 class="">LOAY</h1>
+                        <div class="d-flex flex-row justify-content-around flex-wrap pt-5">
+                            <div class="col-md-3 rounded-lg background-peach align-items-stretch">
+                                <div class="font-weight-bold text-size-md text-color-black mt-6 mb-6">
+                                    Creativity
+                                </div>
+                                <div class="mt-6 mb-6">
+                                    <img class="img-fluid" src="assets/img/creativity-pillar.png"
+                                        alt="Creativity Pillar">
+                                </div>
+                            </div>
+                            <div class="col-md-3 rounded-lg background-lime-green align-items-stretch">
+                                <div class="font-weight-bold text-size-md text-color-black mt-6 mb-6">
+                                    Strategy
+                                </div>
+                                <div class="mt-6 mb-6">
+                                    <img class="img-fluid" src="assets/img/strategy.png" alt="Strategy Pillar">
+                                </div>
+                            </div>
+                            <div class="col-md-3 rounded-lg background-light-blue">
+                                <div class="font-weight-bold text-size-md text-color-black mt-6 mb-6">
+                                    Consistency
+                                </div>
+                                <div class="mt-6 mb-6">
+                                    <img class="img-fluid" src="assets/img/consistency-pillar-icon.png"
+                                        alt="Consistency Pillar">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-right-side  col-md-5 justify-content-around">
+                <div class="bubble bubble1"></div>
+                <div class="bubble bubble2"></div>
+                <div class="bubble bubble3"></div>
+                <div class="bubble bubble4"></div>
+                <div class="about-right-side-content text-justify col-md-10 offset-md-2">
+                    <p>
+                        We believe in the power of digital storytelling to transform brands and create lasting
+                        connections. As a cutting-edge digital marketing agency,
+                        we specialize in crafting bespoke marketing strategies that resonate with your target audience.
+                        Our team of <span class="text-peach font-weight-normal">Creative</span> thinkers, <span
+                            class="text-lime-green font-weight-normal">Strategists</span> and
+                        <span class="text-light-blue font-weight-normal">Consistencies</span> are dedicated to
+                        propelling your
+                        brand to new heights with innovative solutions that drive results.
+                    </p>
+                    <p>
+                        From social media management to content creation, SEO to online advertising, we handle it all
+                        with precision and passion. Our mission
+                        is to amplify your brand's voice in the digital space, ensuring it's heard loud and clear. With
+                        LOAY Creative, you're not just getting
+                        a service provider, you're gaining a partner commited to your success.
+                    </p>
+                    <p>
+                        Let's create something <i class="text-stabilo">remarkable</i> together
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div id="section4" class="section container-fluid">
+        <div class="d-flex flex-row">
+            <div class="contact-us-content justify-content-center col-md-5 offset-md-1">
+                <h1 class="display-1">CONTACT US</h1>
+                <p>We're a small team, but we're <br>
+                    passionate about what we do. If <br>
+                    you have any questions, feel free <br>
+                    to reach out to us directly at
+                </p>
+                <ul>
+                    <li><a href="mailto:loay.digital@gmail.com"><i class="fas fa-envelope fa-1x"></i>
+                            loay.digital@gmail.com</a> </li>
+                    <li><a href="https://instagram.com/loay.creative" target="_blank"><i
+                                class="fab fa-instagram fa-1x"></i>
+                            loay.creative</a></li>
+                    <li><a href="https://tiktok.com/loay.creative" target="_blank"><i class="fab fa-tiktok fa-1x"></i>
+                            @loay.creative</a></li>
+                </ul>
+            </div>
+            <div class="contact-us-img-container col-md-5 justify-content-center align-items-center  d-sm-block">
+                <img class="img-fluid" src="assets/img/contact-us.png" alt="Contact Us">
+                <div class="contact-us-img-shadow"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Side naviation -->
     <div class="navigation">
         <div id="dot0" class="dot" data-target="section0"></div>
         <div id="dot1" class="dot" data-target="section1"></div>
         <div id="dot2" class="dot" data-target="section2"></div>
         <div id="dot3" class="dot" data-target="section3"></div>
         <div id="dot4" class="dot" data-target="section4"></div>
+    </div>
+
+    <!-- Service Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h5 id="modal-title"></h5>
+                            </div>
+                            <div class="col-md-8">
+                                <p id="modal-description"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
